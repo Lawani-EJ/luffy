@@ -27,6 +27,12 @@ Prisma is an open-source ORM (Object-Relational Mapping) tool that lets us defin
 ## Setting up Clerk and User Authentication with Clerk
 Clerk is a platform that helps manage users by providing tools for authentication and user profiles. It includes ready-made UI components, APIs, and a dashboard for admins, making adding authentication features to your app much more straightforward. Instead of building an entire authentication system yourself, Clerk saves time and effort by offering these features out of the box.
 
+![image](https://github.com/user-attachments/assets/38d5efec-fa82-4684-b7de-f6642994bba3)
+
+![image](https://github.com/user-attachments/assets/005ecef7-0478-4f81-9604-418ec9554b6a)
+
+
+
 <!--
 # The Slack Clone
 
