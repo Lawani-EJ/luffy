@@ -6,6 +6,43 @@
 
 # Building the Slack Clone (Phase 1)
 
+## Build the workspace dashboard
+In this second part now that I've setup the database and authentication, It's time to start building the workspace dashboard.
+This dashboard will be the main area where users can use different parts of the app, view their workspaces and see invitations to other workspaces.    
+
+### 1. Create the navigation bar 
+The navigation bar is integral to websites because it helps users navigate the sites and access different features.
+
+### 2. Creating a Workspace List Component
+To display all the workspaces a user has, we need a WorkspaceList component. This component will show the workspace details and allow users to launch a workspace or accept an invitation.
+
+- The component takes several props:
+    - `action`: A function defining what happens when the action button clicks.
+    - `actionText`: The text displayed on the button for each workspace.
+    - `buttonVariant`: Specifies the style of the button, either 'primary' or 'secondary'.
+    - `title`: The title of the workspace list.
+    - `workspaces`: An array of workspace objects with additional details.
+- For each workspace, we show:
+    - Name: The name of the workspace.
+    - Image: The workspace image or a placeholder if no image is provided.
+    - Number of Members: The count of members in the workspace.
+ 
+- Each workspace item is also a form that has hidden input fields. These fields store essential data like `channelId`, `token`, and `workspaceId`. When a user clicks the submit button, these inputs send the needed information to act for that workspace.
+
+### Putting all the componets together
+1. User Information: The function starts by retrieving the current user's information using Clerk.
+2. Workspace Data: It queries the database to get all the workspaces the user belongs to and any pending invitations.
+3. Functions for Actions: There are three main functions defined here:
+   - `acceptInvitation()`: Accepts an invitation and redirects the user to the appropriate workspace.
+   - `launchChat()`: Launches the selected workspace's chat by redirecting to the correct URL.
+   - `goToGetStartedPage()`: Redirects to the "Get Started" page to create a new workspace.
+
+Finally, I return the `Navbar`, `WorkspaceList`, and Clerk’s `SignOutButton` button to present a welcoming interface.
+
+## Outpus
+![image](https://github.com/user-attachments/assets/1091f816-838c-4151-87b9-afe80b478c48)
+
+<!--
 In this first part, I'll be setting up the basics by setting up the project and building the first user interface, including the channel page.
 
 1. In this first part of building the Slack clone, I:
@@ -31,6 +68,7 @@ Clerk is a platform that helps manage users by providing tools for authenticatio
 
 ![image](https://github.com/user-attachments/assets/005ecef7-0478-4f81-9604-418ec9554b6a)
 
+-->
 
 
 <!--
